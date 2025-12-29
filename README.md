@@ -1,295 +1,295 @@
-# 🚀 DestravaCV - Sistema ATS de Análise Inteligente de Currículos
+# 🚀 DestravaCV - Intelligent Resume Analysis ATS System
 
-[![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)]()
+[![Status](https://img.shields.io/badge/Status-In%20Development-yellow)]()
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)]()
 [![License](https://img.shields.io/badge/License-MIT-blue)]()
 
-Sistema completo de análise de currículos utilizando inteligência artificial, desenvolvido com Node.js e integração OpenAI para otimização de processos de recrutamento e compatibilidade com sistemas ATS (Applicant Tracking System).
+Complete resume analysis system using artificial intelligence, developed with Node.js and OpenAI integration to optimize recruitment processes and ensure compatibility with ATS (Applicant Tracking System).
 
 ---
 
-## 📊 Status Atual do Projeto
+## 📊 Project Status
 
-**Última atualização:** 06 de Dezembro de 2025
+**Last Update:** December 6, 2025
 
-### ✅ Funcionalidades Implementadas
+### ✅ Implemented Features
 
-| Módulo | Status | Descrição |
-|--------|--------|-----------|
-| **Autenticação** | ✅ Completo | Login, registro, JWT, recuperação de senha |
-| **Análise de CV** | ✅ Completo | Upload e análise inteligente com OpenAI |
-| **Dashboard Admin** | ✅ Completo | Gestão completa de usuários e códigos |
-| **Pagamentos** | ✅ Completo | Integração Stripe com múltiplos planos |
-| **Gift Codes** | ✅ Completo | Sistema de códigos de presente |
-| **Histórico** | ✅ Completo | Visualização de análises anteriores |
-| **PWA** | ✅ Completo | Progressive Web App com Service Worker |
-| **Testes E2E** | ✅ Completo | 14 suites de testes Cypress |
-| **Deploy** | ✅ Configurado | Docker + Railway ready |
+| Module | Status | Description |
+|--------|--------|-------------|
+| **Authentication** | ✅ Complete | Login, register, JWT, password recovery |
+| **CV Analysis** | ✅ Complete | Upload and intelligent analysis with OpenAI |
+| **Admin Dashboard** | ✅ Complete | Complete user and code management |
+| **Payments** | ✅ Complete | Stripe integration with multiple plans |
+| **Gift Codes** | ✅ Complete | Gift code system |
+| **History** | ✅ Complete | View previous analyses |
+| **PWA** | ✅ Complete | Progressive Web App with Service Worker |
+| **E2E Tests** | ✅ Complete | 14 Cypress test suites |
+| **Deploy** | ✅ Configured | Docker + Railway ready |
 
-### 🔄 Em Desenvolvimento
+### 🔄 In Development
 
-- [ ] Otimizações de performance
-- [ ] Melhorias na UI/UX
-- [ ] Novas integrações de IA
+- [ ] Performance optimizations
+- [ ] UI/UX improvements
+- [ ] New AI integrations
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
 ### Backend
-| Tecnologia | Versão | Uso |
-|------------|--------|-----|
-| Node.js | 18+ | Runtime JavaScript |
-| Express.js | 4.18.2 | Framework web |
-| Sequelize ORM | 6.37.7 | ORM para banco de dados |
-| SQLite/PostgreSQL | - | Banco de dados |
-| OpenAI API | - | Análise inteligente de currículos |
-| Stripe | 18.1.1 | Processamento de pagamentos |
-| JWT | 9.0.2 | Autenticação segura |
-| Winston | 3.17.0 | Sistema de logging |
-| Nodemailer | 7.0.3 | Envio de emails |
+| Technology | Version | Usage |
+|------------|---------|-------|
+| Node.js | 18+ | JavaScript Runtime |
+| Express.js | 4.18.2 | Web Framework |
+| Sequelize ORM | 6.37.7 | Database ORM |
+| SQLite/PostgreSQL | - | Database |
+| OpenAI API | - | Intelligent resume analysis |
+| Stripe | 18.1.1 | Payment processing |
+| JWT | 9.0.2 | Secure authentication |
+| Winston | 3.17.0 | Logging system |
+| Nodemailer | 7.0.3 | Email sending |
 
 ### Frontend
-| Tecnologia | Descrição |
-|------------|-----------|
-| HTML5/CSS3 | Estrutura e estilização |
-| JavaScript Vanilla | Lógica de aplicação |
+| Technology | Description |
+|------------|-------------|
+| HTML5/CSS3 | Structure and styling |
+| Vanilla JavaScript | Application logic |
 | PWA | Progressive Web App |
-| Service Worker | Cache e offline support |
+| Service Worker | Cache and offline support |
 
-### DevOps & Infraestrutura
-| Ferramenta | Uso |
-|------------|-----|
-| Docker | Containerização |
-| Railway | Deploy em produção |
-| Nginx | Proxy reverso |
+### DevOps & Infrastructure
+| Tool | Usage |
+|------|-------|
+| Docker | Containerization |
+| Railway | Production Deploy |
+| Nginx | Reverse Proxy |
 | GitHub Actions | CI/CD |
-| Cypress | Testes E2E |
-| Jest | Testes unitários |
+| Cypress | E2E Tests |
+| Jest | Unit Tests |
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 DestravaCV/
-├── 📂 backend/                    # API e lógica de negócio
-│   ├── controllers/               # 10 controladores (ATS, Admin, Payment, etc.)
-│   ├── models/                    # 7 modelos de dados
-│   ├── routes/                    # 11 rotas da API
-│   ├── services/                  # 7 serviços (OpenAI, ATS, Email, etc.)
-│   ├── utils/                     # 11 utilitários e middlewares
-│   ├── migrations/                # Migrations do banco
-│   ├── tests/                     # Testes unitários (20+ arquivos)
-│   └── cypress/e2e/               # 14 suites de testes E2E
+├── 📂 backend/                    # API and business logic
+│   ├── controllers/               # 10 controllers (ATS, Admin, Payment, etc.)
+│   ├── models/                    # 7 data models
+│   ├── routes/                    # 11 API routes
+│   ├── services/                  # 7 services (OpenAI, ATS, Email, etc.)
+│   ├── utils/                     # 11 utilities and middlewares
+│   ├── migrations/                # Database migrations
+│   ├── tests/                     # Unit tests (20+ files)
+│   └── cypress/e2e/               # 14 E2E test suites
 │
-├── 📂 frontend/                   # Interface do usuário
+├── 📂 frontend/                   # User Interface
 │   ├── assets/
-│   │   ├── css/                   # 7 arquivos de estilo
-│   │   ├── js/                    # 24 scripts JavaScript
-│   │   └── img/                   # 17 imagens e ícones
-│   ├── *.html                     # 20+ páginas da aplicação
-│   ├── manifest.json              # Configuração PWA
+│   │   ├── css/                   # 7 style files
+│   │   ├── js/                    # 24 JavaScript scripts
+│   │   └── img/                   # 17 images and icons
+│   ├── *.html                     # 20+ application pages
+│   ├── manifest.json              # PWA Configuration
 │   └── sw.js                      # Service Worker
 │
-├── 📂 docs/                       # Documentação completa
-│   ├── deployment/                # 9 guias de deploy
-│   ├── security/                  # 8 documentos de segurança
-│   └── archive/                   # Documentação histórica
+├── 📂 docs/                       # Complete documentation
+│   ├── deployment/                # 9 deployment guides
+│   ├── security/                  # 8 security documents
+│   └── archive/                   # Historical documentation
 │
-├── 📄 docker-compose.yml          # Configuração Docker
-├── 📄 Dockerfile                  # Build da aplicação
-├── 📄 railway.json                # Configuração Railway
-└── 📄 package.json                # Dependências do projeto
+├── 📄 docker-compose.yml          # Docker Configuration
+├── 📄 Dockerfile                  # Application Build
+├── 📄 railway.json                # Railway Configuration
+└── 📄 package.json                # Project Dependencies
 ```
 
 ---
 
-## 🎯 Funcionalidades Principais
+## 🎯 Key Features
 
-### 1. 📄 Análise Inteligente de Currículos
-- Upload de PDF/DOC/DOCX
-- Processamento com OpenAI
-- Score de compatibilidade ATS
-- Sugestões de melhorias
-- Análise de palavras-chave
+### 1. 📄 Intelligent Resume Analysis
+- PDF/DOC/DOCX Upload
+- Processing with OpenAI
+- ATS compatibility score
+- Improvement suggestions
+- Keyword analysis
 
-### 2. 🔐 Sistema de Autenticação
-- Registro e login seguro
-- JWT com criptografia
-- Recuperação de senha por email
-- Proteção de rotas
+### 2. 🔐 Authentication System
+- Secure registration and login
+- Encrypted JWT
+- Password recovery via email
+- Route protection
 
-### 3. 💳 Sistema de Pagamentos
-- Integração Stripe completa
-- Múltiplos planos de créditos
-- Webhooks para processamento
-- Histórico de transações
+### 3. 💳 Payment System
+- Complete Stripe integration
+- Multiple credit plans
+- Webhooks for processing
+- Transaction history
 
-### 4. 🎁 Sistema de Gift Codes
-- Criação em lote
-- Códigos personalizáveis
-- Data de expiração
-- Limite de usos
-- Exportação CSV
+### 4. 🎁 Gift Code System
+- Batch creation
+- Customizable codes
+- Expiration date
+- Usage limit
+- CSV Export
 
-### 5. 👑 Painel Administrativo
-- Dashboard de estatísticas
-- Gestão de usuários
-- Gestão de gift codes
-- Métricas de uso
-- Logs e auditoria
+### 5. 👑 Admin Panel
+- Statistics dashboard
+- User management
+- Gift code management
+- Usage metrics
+- Logs and audit
 
-### 6. 📊 Histórico de Análises
-- Visualização de análises anteriores
-- Comparação de resultados
-- Download de relatórios
+### 6. 📊 Analysis History
+- View previous analyses
+- Compare results
+- Download reports
 
 ---
 
-## 🔧 Instalação e Configuração
+## 🔧 Installation and Configuration
 
-### Pré-requisitos
+### Prerequisites
 - Node.js 18+
-- SQLite3 ou PostgreSQL
-- Conta OpenAI com API key
-- Conta Stripe (para pagamentos)
+- SQLite3 or PostgreSQL
+- OpenAI Account with API key
+- Stripe Account (for payments)
 
-### Instalação Local
+### Local Installation
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/rafaelnovaes22/destravaCV.git
 cd destravaCV
 
-# Instale as dependências do backend
+# Install backend dependencies
 cd backend
 npm install
 
-# Configure as variáveis de ambiente
+# Configure environment variables
 cp ../env.example .env
-# Edite o arquivo .env com suas configurações
+# Edit the .env file with your settings
 
-# Inicie o servidor
+# Start the server
 npm start
 ```
 
-### Variáveis de Ambiente Necessárias
+### Required Environment Variables
 
 ```env
-# Servidor
+# Server
 PORT=3000
 NODE_ENV=development
 
-# Banco de Dados
+# Database
 DATABASE_URL=sqlite:./database.sqlite
 
-# Autenticação
-JWT_SECRET=sua-chave-secreta
+# Authentication
+JWT_SECRET=your-secret-key
 
 # OpenAI
-OPENAI_API_KEY=sua-api-key
+OPENAI_API_KEY=your-api-key
 
 # Stripe
-STRIPE_SECRET_KEY=sua-chave-stripe
-STRIPE_WEBHOOK_SECRET=seu-webhook-secret
+STRIPE_SECRET_KEY=your-stripe-key
+STRIPE_WEBHOOK_SECRET=your-webhook-secret
 
 # Email
 EMAIL_HOST=smtp.example.com
-EMAIL_USER=seu-email
-EMAIL_PASS=sua-senha
+EMAIL_USER=your-email
+EMAIL_PASS=your-password
 ```
 
 ### Docker
 
 ```bash
-# Build e execução com Docker Compose
+# Build and run with Docker Compose
 docker-compose up --build
 
-# Produção
+# Production
 docker-compose -f docker-compose.prod.yml up --build
 ```
 
 ---
 
-## 📋 Endpoints da API
+## 📋 API Endpoints
 
-### Autenticação
+### Authentication
 ```
-POST /api/auth/login           # Login de usuário
-POST /api/auth/register        # Registro de novo usuário
-POST /api/password-reset/request  # Solicitar reset de senha
-POST /api/password-reset/reset    # Resetar senha
-```
-
-### Análise de Currículos
-```
-POST /api/analysis/upload      # Upload e análise de currículo
-GET  /api/analysis/history     # Histórico de análises
-GET  /api/analysis/:id         # Detalhes de uma análise
+POST /api/auth/login           # User Login
+POST /api/auth/register        # New User Registration
+POST /api/password-reset/request  # Request Password Reset
+POST /api/password-reset/reset    # Reset Password
 ```
 
-### Pagamentos
+### Resume Analysis
 ```
-POST /api/payment/create-session  # Criar sessão de pagamento
-POST /api/payment/webhook         # Webhook do Stripe
-GET  /api/payment/verify          # Verificar status
+POST /api/analysis/upload      # Upload and analyze resume
+GET  /api/analysis/history     # Analysis History
+GET  /api/analysis/:id         # Analysis Details
+```
+
+### Payments
+```
+POST /api/payment/create-session  # Create payment session
+POST /api/payment/webhook         # Stripe Webhook
+GET  /api/payment/verify          # Verify status
 ```
 
 ### Gift Codes
 ```
-POST /api/gift-codes/redeem    # Resgatar código
-GET  /api/admin/gift-codes     # Listar códigos (admin)
-POST /api/admin/gift-codes     # Criar códigos (admin)
+POST /api/gift-codes/redeem    # Redeem code
+GET  /api/admin/gift-codes     # List codes (admin)
+POST /api/admin/gift-codes     # Create codes (admin)
 ```
 
-### Administração
+### Administration
 ```
-GET  /api/admin/users          # Listar usuários
-GET  /api/admin/stats          # Estatísticas do sistema
+GET  /api/admin/users          # List users
+GET  /api/admin/stats          # System statistics
 ```
 
 ---
 
-## 🧪 Testes
+## 🧪 Tests
 
-### Testes Unitários (Jest)
+### Unit Tests (Jest)
 ```bash
 cd backend
-npm test                  # Executar todos os testes
-npm run test:watch        # Modo watch
-npm run test:coverage     # Com cobertura
+npm test                  # Run all tests
+npm run test:watch        # Watch mode
+npm run test:coverage     # With coverage
 ```
 
-### Testes E2E (Cypress)
+### E2E Tests (Cypress)
 ```bash
 cd backend
-npm run cypress:open      # Modo interativo
-npm run cypress:run       # Modo headless
-npm run test:e2e          # Alias para cypress run
+npm run cypress:open      # Interactive mode
+npm run cypress:run       # Headless mode
+npm run test:e2e          # Alias for cypress run
 ```
 
-### Suites de Testes E2E Disponíveis
-| Suite | Descrição |
-|-------|-----------|
-| auth.cy.js | Autenticação e login |
-| admin.cy.js | Painel administrativo |
-| contact.cy.js | Formulário de contato |
-| cv-analysis-complete.cy.js | Análise completa de CV |
-| cv-generation.cy.js | Geração de currículo |
-| gift-code.cy.js | Sistema de gift codes |
-| history.cy.js | Histórico de análises |
-| payment.cy.js | Fluxo de pagamentos |
-| password-recovery.cy.js | Recuperação de senha |
-| performance.cy.js | Testes de performance |
-| faq.cy.js | Página de FAQ |
-| terms-privacy.cy.js | Termos e privacidade |
+### Available E2E Test Suites
+| Suite | Description |
+|-------|-------------|
+| auth.cy.js | Authentication and login |
+| admin.cy.js | Administrative panel |
+| contact.cy.js | Contact form |
+| cv-analysis-complete.cy.js | Complete CV Analysis |
+| cv-generation.cy.js | Resume generation |
+| gift-code.cy.js | Gift code system |
+| history.cy.js | Analysis history |
+| payment.cy.js | Payment flow |
+| password-recovery.cy.js | Password recovery |
+| performance.cy.js | Performance tests |
+| faq.cy.js | FAQ Page |
+| terms-privacy.cy.js | Terms and privacy |
 
 ---
 
-## 🚀 Deploy em Produção
+## 🚀 Production Deploy
 
-### Railway (Recomendado)
+### Railway (Recommended)
 
 ```bash
 # Deploy via Railway CLI
@@ -298,66 +298,66 @@ railway init
 railway up
 ```
 
-Consulte `docs/deployment/RAILWAY_DEPLOY_GUIDE.md` para instruções detalhadas.
+See `docs/deployment/RAILWAY_DEPLOY_GUIDE.md` for detailed instructions.
 
-### Docker em VPS
+### Docker on VPS
 
 ```bash
-# Build da imagem
+# Build image
 docker build -t destravacv .
 
-# Executar container
+# Run container
 docker run -d -p 3000:3000 --env-file .env destravacv
 ```
 
 ---
 
-## 🔐 Segurança
+## 🔐 Security
 
-| Recurso | Implementação |
-|---------|---------------|
-| Criptografia | AES-256 para dados sensíveis |
-| Validação | Sanitização de todos os inputs |
-| Rate Limiting | Proteção contra DDoS/brute force |
-| CORS | Configurado adequadamente |
-| Headers | Helmet para headers de segurança |
-| Logs | Auditoria completa de ações |
+| Feature | Implementation |
+|---------|----------------|
+| Encryption | AES-256 for sensitive data |
+| Validation | Sanitization of all inputs |
+| Rate Limiting | Protection against DDoS/brute force |
+| CORS | Properly configured |
+| Headers | Helmet for security headers |
+| Logs | Complete action audit |
 
-Para mais detalhes, consulte `docs/security/SEGURANCA_PRODUCAO.md`.
-
----
-
-## 📚 Documentação Adicional
-
-| Documento | Descrição |
-|-----------|-----------|
-| `GUIA_ADMIN_E_NAVEGACAO.md` | Guia do painel administrativo |
-| `RAILWAY_SETUP.md` | Configuração do Railway |
-| `INSTRUCOES_REINICIAR_SERVIDOR.md` | Como reiniciar o servidor |
-| `TROUBLESHOOTING_HISTORICO.md` | Problemas conhecidos e soluções |
-| `SECURITY_URGENT.md` | Questões de segurança urgentes |
+For more details, see `docs/security/SEGURANCA_PRODUCAO.md`.
 
 ---
 
-## 🤝 Contribuição
+## 📚 Additional Documentation
 
-Este projeto segue as melhores práticas de desenvolvimento:
-
-- ✅ Código limpo e bem documentado
-- ✅ Testes automatizados (unitários + E2E)
-- ✅ Commits semânticos
-- ✅ Code review obrigatório
-- ✅ CI/CD automatizado
-
----
-
-## 📄 Licença
-
-MIT License - Consulte o arquivo [LICENSE](LICENSE) para detalhes.
+| Document | Description |
+|----------|-------------|
+| `ADMIN_AND_NAVIGATION_GUIDE.md` | Admin panel guide |
+| `RAILWAY_SETUP.md` | Railway Configuration |
+| `SERVER_RESTART_INSTRUCTIONS.md` | How to restart the server |
+| `TROUBLESHOOTING_HISTORY.md` | Known issues and solutions |
+| `SECURITY_URGENT.md` | Urgent security issues |
 
 ---
 
-## 👨‍💻 Desenvolvedor
+## 🤝 Contribution
+
+This project follows development best practices:
+
+- ✅ Clean and well-documented code
+- ✅ Automated tests (unit + E2E)
+- ✅ Semantic Commits
+- ✅ Mandatory Code Review
+- ✅ Automated CI/CD
+
+---
+
+## 📄 License
+
+MIT License - See [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Developer
 
 **Rafael de Novaes**
 
@@ -369,6 +369,6 @@ MIT License - Consulte o arquivo [LICENSE](LICENSE) para detalhes.
 
 <div align="center">
 
-**⭐ Se este projeto foi útil, considere dar uma estrela no repositório! ⭐**
+**⭐ If this project was useful, please consider giving a star on the repository! ⭐**
 
 </div>
